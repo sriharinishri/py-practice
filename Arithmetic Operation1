@@ -1,0 +1,21 @@
+
+num1= int (input("Enter the First num:"))
+num2= int (input("Enter the Second num:"))
+operator = input("Enter the operator:")
+
+if operator == '+':
+    print(f"The Result is : {num1 + num2}")
+elif operator == '-':
+    print(f"The Result is : {num1 - num2}")
+elif operator == '*':
+    print(f"The Result is : {num1 * num2}")
+elif operator == '/':
+    print(f"The Result is : {num1 / num2}")
+elif operator == '%':
+    print(f"The Result is : {num1 % num2}")
+elif operator == '**':
+    print(f"The Result is : {num1 ** num2}")
+elif operator == '//':
+    print(f"The Result is : {num1 //num2}")
+else:
+    print("Invalid Operator")
