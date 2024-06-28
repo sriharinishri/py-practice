@@ -1,0 +1,51 @@
+tasks = []
+task_id = 1
+
+def view_todo_list():
+    print("To-Do List:")
+    for task in tasks:
+        status = "Complete" if task["is_complete"] else "Incomplete"
+        print(f"{task['task_id']}. {task['description']} - {status}")
+
+def add_task():
+    global task_id
+    description = input("Enter task description: ")
+    task = {
+        "task_id": task_id,
+        "description": description,
+        "is_complete": False
+    }
+    tasks.append(task)
+    print(f"Task '{description}' added to the list.")
+    task_id += 1
+
+def mark_task_complete():
+    view_todo_list()
+    task_number = int(input("Enter the task number to mark as complete: "))
+    for task in tasks:
+        if task["task_id"] == task_number:
+            task["is_complete"] = True
+            print(f"Task '{task['description']}' marked as complete.")
+            return
+    print("Invalid task number.")
+
+while True:
+    print("\nTo-Do List Menu:")
+    print("1. View To-Do List")
+    print("2. Add a Task")
+    print("3. Mark a Task as Complete")
+    print("4. Exit")
+
+    choice = input("Enter your choice (1-4): ")
+
+    if choice == "1":
+        view_todo_list()
+    elif choice == "2":
+        add_task()
+    elif choice == "3":
+        mark_task_complete()
+    elif choice == "4":
+        print("Exiting To-Do List application...")
+        break
+    else:
+        print("Invalid choice. Please try again.")
