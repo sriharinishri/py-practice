@@ -1,0 +1,24 @@
+# Simple Stopwatch
+
+#import the time module
+import time
+
+# Display a message to start the Stopwatch
+print("Press enter to start the stpwatch")
+input()
+
+# REcord the start  time
+start = time.time()
+
+# Prompt the user to stop the stopwatch.
+print("Press Enter to stop the stopwatch.")
+input()
+
+# Record the end time
+end = time.time()
+
+# Calculate the elapsed time:
+elapsed_time = end - start
+
+# Display the elapsed time:
+print(f"The elapsed time is {elapsed_time:.2f} seconds.")
