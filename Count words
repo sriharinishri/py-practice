@@ -1,0 +1,24 @@
+# Word Count Tool
+
+# Prompt the user to enter a sentece 
+text = input("Enter the text:")
+
+
+# Count the number of words.
+word_count =0
+current_word =" "
+    
+for char in text:
+    # To check whitespace char using isspace()method
+    if char.isspace(): 
+        if current_word:
+            word_count += 1
+            current_word = ""
+    else:
+        current_word += char
+
+if current_word:
+    word_count += 1
+
+print(f"The text contains {word_count} words.")
+    
