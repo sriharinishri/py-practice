@@ -1,0 +1,35 @@
+# Basic Quiz Game
+
+# Create a list of questions and answers:
+questions = [
+    "Which data structure in Python is used to store a collection of items in an ordered way?",
+    "What is the difference between a list and a tuple in Python?",
+    "Which keyword is used to define a function in Python?",
+    "What is the output of the following code: print(type(5 + 5.0))"
+]
+
+answers = [
+    "list",
+    "Tuples are immutable, while lists are mutable",
+    "def",
+    "float"
+]
+
+score = 0
+
+# Iterate through the questions and answers:
+for i in range(len(questions)):
+    print(questions[i])
+    user_answer = input("Your answer: ")
+    
+    if user_answer.lower() == answers[i].lower():
+        print("Correct!")
+        score += 1
+    else:
+        print("Incorrect.")
+    
+    print()
+    
+#Display the final score after all questions are answered.
+
+print(f"Your final score is {score} out of {len(questions)}.")
