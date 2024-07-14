@@ -1,0 +1,19 @@
+# SIMPLE ALARM CLOCK
+
+import time
+
+def alarm_clock():
+    alarm_hours = int(input("Enter the alarm hours: "))
+    alarm_minutes = int(input("Enter the alarm minutes: "))
+
+    while True:
+        current_time = time.localtime()
+        current_hours = current_time.tm_hour
+        current_minutes = current_time.tm_min
+
+        if current_hours == alarm_hours and current_minutes == alarm_minutes:
+            print("Alarm time reached!")
+            break
+        time.sleep(1)
+
+alarm_clock()
