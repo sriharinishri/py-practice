@@ -1,0 +1,17 @@
+# Tip Calculator
+
+# Prompt the user to enter the total bill amount.
+bill_amount = float (input ("Enter the Total Bill amount:"))
+
+# Prompt the user to enter the tip percentage.
+tip_percentage = int (input ("Enter the tip percentage:"))
+
+# Calculate the tip amount
+tip_amount = bill_amount * ( tip_percentage /100)
+
+# Calculate the total amount ( Bill + Tip )
+total_amount = bill_amount + tip_amount
+
+# Display the tip amount and the total amount:
+print(f"Tip amount: ${tip_amount:.2f}")
+print(f"Total amount: ${total_amount:.2f}")
