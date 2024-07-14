@@ -1,0 +1,19 @@
+# DICE ROLLER SIMULATOR
+
+# Import random module to provide function for random numbers
+import random
+
+# Define a function to roll the DICE
+def roll_dice():
+    return random.randint(1,6)
+    
+while True:
+    # Roll the dice and Display the result
+    result = roll_dice()
+    print(f"You rolled a {result},")
+    
+    # roll aagain
+    roll_again = input("Do you want to roll dice again? (y/n)")
+    
+    if roll_again.lower() != "y":
+        break
