@@ -1,0 +1,16 @@
+# Palindrome Checker 
+#Prompt the user to enter a String 
+Str = input("Enter a string: ")
+
+# Reverse the string
+reverse = Str[::-1]
+print("REversed string :",reverse)
+
+# Check the original string is equal to reversed string
+if Str == reverse:
+    result = "The string is Palindrome."
+else :
+    result = "The string is not a Palindrome."
+
+# Display the result
+print (result)
