@@ -1,0 +1,14 @@
+# Currency Converter
+
+# Prompt the user to enter an amount in their local currency\
+local_currency = input("Enter the amount in your local currency: ")
+local_currency = float(local_currency)
+
+#Prompt the user to enter the conversion rate to another currency.
+conversion_rate = float(input("Enter the conversion rate to the other currency: "))
+
+#Calculate the converted amount.
+converted_amount = local_currency * conversion_rate
+
+# Display the converted amount.
+print(f"The converted amount is: {converted_amount:.2f}")
